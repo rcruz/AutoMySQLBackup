@@ -55,7 +55,7 @@ let "N_backup_local_nofiles=0x20"
 # @info:	Default configuration options.
 # @deps:	(none)
 load_default_config() {
-  CONFIG_configfile="/etc/automysqlbackup/automysqlbackup.conf"
+  CONFIG_configfile="${CONFIG_configfile:-/etc/automysqlbackup/automysqlbackup.conf}"
   CONFIG_backup_dir='/var/backup/db'
   CONFIG_multicore='yes'
   CONFIG_multicore_threads=2
